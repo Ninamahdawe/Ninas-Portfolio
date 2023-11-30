@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import { Link, Events, scrollSpy } from 'react-scroll';
+import { useState, useEffect } from 'react';
 
 const Nav = () => {
-    const [navItems, setNavItems] = useState(['Home', 'About', 'Projects', 'Contact']);
+    const [navItems, setNavItems] = useState(['Home', 'About me', 'Portfolio', 'Projects', 'Contact']);
     const [backgroundColor, setBackgroundColor] = useState('transparent');
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Nav = () => {
                     <li key={index}>
                         <Link
                             activeClass="active"
-                            to={item.toLowerCase()}
+                            to={item.toLowerCase().replace(/\s/g, '')} // remove spaces for the 'to' prop
                             spy={true}
                             smooth={true}
                             offset={-70}
