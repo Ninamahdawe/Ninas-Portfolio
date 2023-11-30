@@ -1,28 +1,26 @@
-import React from 'react'
-import styled from 'styled-components';
-import { Outlet } from "react-router-dom";
-import {Nav } from './components/Nav';
-import {Footer} from './components/Footer';
-import {Home} from './components/Home';
-import {About} from './components/About';
-import {Projects} from './components/Projects';
-import {Contact} from './components/Contact';
-import {footerData} from './data/footerData';
-import './assets/css/App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "../src/components/Nav";
+import Home from "../src/pages/Home.jsx";
+import About from "../src/pages/AboutMe.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+import { footerData } from "./data/data";
+import "./assets/css/App.css";
 
 function App() {
   return (
-    <>
-     <Nav  />
-     <Outlet />
-     <Home />
-     <About />
-     <Projects />
-     <Contact />
-     <Footer data={footerData}></Footer>
-    </>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+      <Footer data={footerData} />
+    </Router>
   );
 }
 
 export default App;
-  
