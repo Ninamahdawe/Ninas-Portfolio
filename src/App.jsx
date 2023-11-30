@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "../src/components/Nav";
 import Home from "../src/pages/Home.jsx";
 import About from "../src/pages/AboutMe.jsx";
-import Contact from "./components/Contact.jsx";
+import Contact from "./components/ContactForm.jsx";
 import Footer from "./components/Footer.jsx";
-import { footerData } from "./data/data";
+import { Footerdata } from "./data/data";
 import "./assets/css/App.css";
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
       </Switch>
       <Footer data={footerData} />

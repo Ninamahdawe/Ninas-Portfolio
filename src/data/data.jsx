@@ -46,6 +46,8 @@ export const contactData = {
 };
 export const Footerdata = {
   copyright: "© 2022 Nina Mahdawe",
-  linkedin: "https://www.linkedin.com/in/nina-mahdawe-03a966183/",
-  github: "https://github.com/Ninamahdawe",
+  linkedin: "https://www.linkedin.com/in/nina-mahdawe/",
+  github: "https://github.com/nina-mahdawe",
+  linkedinLogo: "src/assets/image/linkedin.png",
+  githubLogo: "src/assets/image/github.png",
 };

@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client";
 import AboutMe from "./pages/AboutMe";
-import Projects from "./pages/Projects";
+import Projects from "./pages/Project";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import App from "./App.jsx";
@@ -23,8 +24,4 @@ function Main() {
     </Router>
   );
 }
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById("root")).render();
