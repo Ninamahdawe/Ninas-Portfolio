@@ -1,40 +1,38 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider, useHref } from 'react-router-dom';
-import AboutMe from './pages/AboutMe';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import App from './App.jsx'
-import './assets/css/index.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AboutMe from "./pages/AboutMe";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import App from "./App.jsx";
+import "./assets/css/index.css";
 
-import { projectsData, aboutData, contactData } from './data/data.jsx';
+import { projectsData, aboutData, contactData } from "./data/data.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home  data={aboutData} />,
-  },
-  {
-    path: "aboutme",
-    element: <AboutMe data={aboutData} />,
-  },
-  {
-    path: "portfolio",
-    element: <Projects data={projectsData} />,
-  },
-  {
-    path: "contact",
-    element: <Contact data={contactData} />,
-  },
-]);
-
-<>
-
-
-</>
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+function Main() {
+  return (
+    <Router>
+      <App>
+        <Switch>
+          <Route exact path="/">
+            <Home data={aboutData} />
+          </Route>
+          <Router path="/aboutme">
+            <AboutMe data={aboutData} />
+          </Router>
+          <Router path="/portfolio">
+            <Projects data={projectsData} />
+          </Router>
+          <Route path="/contact">
+            <Contact data={contactData} />
+          </Route>
+        </Switch>
+      </App>
+    </Router>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
