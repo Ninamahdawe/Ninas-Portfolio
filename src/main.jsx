@@ -20,7 +20,7 @@ function Main() {
           <Router path="/aboutme">
             <AboutMe data={aboutData} />
           </Router>
-          <Router path="/portfolio">
+          <Router path="/projects">
             <Projects data={projectsData} />
           </Router>
           <Route path="/contact">
