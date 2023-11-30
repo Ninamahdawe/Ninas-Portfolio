@@ -14,18 +14,10 @@ function Main() {
     <Router>
       <App>
         <Switch>
-          <Route exact path="/">
-            <Home data={aboutData} />
-          </Route>
-          <Router path="/aboutme">
-            <AboutMe data={aboutData} />
-          </Router>
-          <Router path="/projects">
-            <Projects data={projectsData} />
-          </Router>
-          <Route path="/contact">
-            <Contact data={contactData} />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={AboutMe} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </App>
     </Router>

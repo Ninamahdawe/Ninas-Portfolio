@@ -1,13 +1,19 @@
 import React from "react";
-import AboutMe from "../components/AboutMe";
+import { aboutData } from "../data";
 
-const AboutMePage = () => {
+const AboutMe = () => {
+  const { intro, bio, resume } = aboutData;
+
   return (
     <div>
-      <h1>Welcome to my page!</h1>
-      <AboutMe />
+      <h2>About Me</h2>
+      <p>{intro}</p>
+      <p dangerouslySetInnerHTML={{ __html: bio }} />
+      <a href={resume} target="_blank" rel="noopener noreferrer">
+        View my resume
+      </a>
     </div>
   );
 };
 
-export default AboutMePage;
+export default AboutMe;
