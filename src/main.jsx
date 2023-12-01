@@ -1,6 +1,7 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Project";
 import Contact from "./pages/Contact";
@@ -8,20 +9,21 @@ import Home from "./pages/Home";
 import App from "./App.jsx";
 import "./assets/css/index.css";
 
-import { projectsData, aboutData, contactData } from "./data/data.jsx";
+// import { projectsData, aboutData, contactData } from "./data/data.jsx";
 
 function Main() {
   return (
     <Router>
       <App>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={AboutMe} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </App>
     </Router>
   );
 }
+
 ReactDOM.createRoot(document.getElementById("root")).render();
