@@ -1,19 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ContactForm from "./components/ContactForm";
-
+import { AboutMe, Project, Contact, Home } from "./components/pages";
 import { aboutData, projectsData, contactData } from "data/data";
 
 const App = () => {
   return (
     <>
-      <Nav />
-      <Hero />
+      <Navbar />
+      <Home data={aboutData} />
       <Routes>
-        <Route path="/" element={<Home data={aboutData} />} />
-        <Route path="/" element={<AboutMe data={aboutData} />} />
-        <Route path="portfolio" element={<Project data={projectsData} />} />
-        <Route path="contact" element={<Contact data={contactData} />} />
+        <Route path="/about" element={<AboutMe data={aboutData} />} />
+        <Route path="/portfolio" element={<Project data={projectsData} />} />
+        <Route path="/contact" element={<Contact data={contactData} />} />
       </Routes>
       <ContactForm />
       <Footer />

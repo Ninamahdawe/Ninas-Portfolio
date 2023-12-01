@@ -17,26 +17,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </BrowserRouter>,
   document.getElementById("root")
 );
-// import { projectsData, aboutData, contactData } from "./data/data.jsx";
-
-// const router = createBrowserRouter({
-//   path: "/",
-//   element: <App />,
-//   children: [
-//     {
-//       path: "/about",
-//       element: <AboutMe />,
-//     },
-//     {
-//       path: "/projects",
-//       element: <Projects data={projectsData} />,
-//     },
-//     {
-//       path: "/contact",
-//       element: <Contact data={contactData} />,
-//     },
-//   ],
-// });
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <RouterProvider router={router}></RouterProvider>
-// );
