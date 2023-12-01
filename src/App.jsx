@@ -1,7 +1,16 @@
 // import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { ContactForm, Footer, Nav, Hero, StarsCanvas } from "./components";
-import AboutMe from "./pages/AboutMe";
+import {
+  ContactForm,
+  Footer,
+  Nav,
+  Hero,
+  // StarsCanvas,
+  Project,
+  AboutMe,
+  Contact,
+} from "";
+// import AboutMe from "./components/AboutMe";
 // import Nav from "../src/components/Nav.jsx";
 // import Home from "../src/pages/Home.jsx";
 // import About from "../src/pages/AboutMe.jsx";
@@ -19,6 +28,8 @@ const App = () => {
           <Hero />
         </div>
         <AboutMe />
+        <Project />
+        <Contact />
         <ContactForm />
         <Footer />
         <div className="relative z-0">
