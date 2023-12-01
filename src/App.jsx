@@ -1,8 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ContactForm from "./components/ContactForm";
-import { AboutMe, Project, Contact, Home } from "./components/pages";
-import { aboutData, projectsData, contactData } from "data/data";
+import AboutMe from "./pages/AboutMe.jsx";
+import Project from "./pages/Project.jsx";
+import Contact from "./pages/Contact.jsx";
+import Home from "./pages/Home.jsx";
+import { aboutData, projectsData, contactData } from "./data/data.jsx";
 
 const App = () => {
   return (
