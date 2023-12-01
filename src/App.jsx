@@ -1,15 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import {
-  ContactForm,
-  Footer,
-  Nav,
-  Hero,
-  Project,
-  AboutMe,
-  Contact,
-  Home,
-} from "components";
+import ContactForm from "./components/ContactForm";
+
 import { aboutData, projectsData, contactData } from "data/data";
 
 const App = () => {
