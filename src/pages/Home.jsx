@@ -5,9 +5,13 @@ import { aboutData, contactData } from "../data/data";
 
 const Home = () => {
   return (
-    <Parallax bgImage="src/assets/image/Profile-preview.png" strength={500}>
-      <div style={{ height: 500 }}>
-        <h1>
+    <Parallax
+      bgImage="src/assets/image/Profile-preview.png"
+      strength={500}
+      bgStyle={{ height: "auto", width: "100%" }}
+    >
+      <div style={{ height: "500px" }}>
+        <h1 style={{ textAlign: "center", marginTop: "5%" }}>
           Hi, I'm{" "}
           <mark style={{ backgroundColor: "lightblue" }}>
             <strong>{aboutData.name}</strong>
