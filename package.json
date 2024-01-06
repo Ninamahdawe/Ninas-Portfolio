@@ -11,27 +11,33 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.11",
     "@react-three/drei": "^9.89.0",
     "@react-three/fiber": "^8.15.11",
-    "bootstrap": "^5.3.2",
     "framer-motion": "^10.16.9",
     "maath": "^0.10.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.20.0",
     "react-scroll": "^1.9.0",
     "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "styled-components": "^6.1.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
     "eslint": "^8.53.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "vite": "^5.0.4"
   }
 }
